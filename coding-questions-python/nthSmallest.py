@@ -22,14 +22,19 @@ def findSmallest(list):
 #This is very inefficient -- runtime ~ O(n*L) where n is the nth num (nth smallest) 
 #  and L is the length of the argument 
 
+#Another approach is to sort the array and use the appropriate index to return the corrent values
+#This will be 0(n log n) runtime where n is the len of the list
+#The space complexity will depend on the sorting algorithm used and if it sorts in place
+#Assume merge sort so O(n) space complexity
+
 #Another approach is to maintain a heap and then "pop" n times and return the appropriate head
+#Same time and space complexity as approach two (line 25)
+#O(nlogn) time (avg case) and O(n) space (worst case)
 def findNthSmallest(list, n):
 	#error checking 
 	if n> len(list) or n < 1:
 		return None;
 		
-	
-	
 	heapq.heapify(list)
 	for dummy in range(n-1):
 		heapq.heappop(list)
