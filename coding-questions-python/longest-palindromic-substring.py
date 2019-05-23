@@ -14,7 +14,6 @@ def init():
 	print(dummy)
 
 def longestPalindromicSubstring(str):
-	
 	cache = []
 	
 	#init 2D array with False at all indices
@@ -45,7 +44,6 @@ def longestPalindromicSubstring(str):
 def getSubstring(str, i, j):
 	return str[i:j+1]
 		
-
 def setSubstring(str, i, j):
 	global longestLength
 	global longestSubstring
@@ -56,7 +54,6 @@ def setSubstring(str, i, j):
 
 result = longestPalindromicSubstring("jkahhakkkracecarxoxo")
 print(result)
-
 
 #TODO: check why global keyword is needed on ln 51, 52
 #TODO: estimate big O runtime complexity
