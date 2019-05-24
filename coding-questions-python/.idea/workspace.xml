@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad9c7497-bd19-4a51-93a2-08396e5d2e37" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reverse_linked_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/reverse_linked_list.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/reverse_linked_list.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="78" selection-end-column="24" />
+            <state relative-caret-position="218">
+              <caret line="61" column="8" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -145,8 +144,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/reverse_linked_list.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="78" selection-end-column="24" />
+        <state relative-caret-position="218">
+          <caret line="61" column="8" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="8" />
         </state>
       </provider>
     </entry>

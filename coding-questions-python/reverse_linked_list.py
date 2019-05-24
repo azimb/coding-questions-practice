@@ -58,6 +58,8 @@ def reverseLinkedList(head):
         current = prev.next
         next = current.next
 
+        prev.next is None
+        
         while next is not None:
             current.next = prev
             prev = current
