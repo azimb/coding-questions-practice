@@ -32,12 +32,48 @@ while(next == null)
 	current.next = prev
 	prev = current
 	current = next
-	next = current.next
+    next = current.next
 
 current.next = prev
 return current
- 
 Runtime complexity is O(N) where N is the length of the linked list. Constant space complexity.
 '''
 
+class LinkedListNode:
+    def __init__(self, val, next):
+        self.val, self.next = val, next
 
+def reverseLinkedList(head):
+    # empty list
+    if head is None:
+        return None
+
+    # singleton
+    elif head.next is None:
+        return head
+
+    # generic case
+    else:
+        prev = head
+        current = prev.next
+        next = current.next
+
+        while next is not None:
+            current.next = prev
+            prev = current
+            current = next
+            next = current.next
+
+        current.next = prev
+        return current
+
+fourth = LinkedListNode(9, None)
+third = LinkedListNode(6, fourth)
+second = LinkedListNode(5, third)
+head = LinkedListNode(2, second)
+
+result = reverseLinkedList(head)
+
+while(result is not None):
+    print(result.val)
+    result = result.next
