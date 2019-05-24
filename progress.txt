@@ -5,3 +5,8 @@ Longest palindromic substring:
 
 Reverse linked list:
     - cyclic linked list bug (fix pending)
+
+Cyclic linked list:
+    - code seems to work
+    - review pending
+    (TODO: check how to make a single point itself)
