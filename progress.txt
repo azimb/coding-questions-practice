@@ -1,0 +1,7 @@
+Longest palindromic substring:
+    - code seems to work
+    - feedback is given
+    - feedback implementation pending
+
+Reverse linked list:
+    - cyclic linked list bug (fix pending)
