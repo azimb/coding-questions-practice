@@ -26,25 +26,21 @@ class LinkedListNode:
         self.val, self.next = val, next
 
 def checkCyclic(head):
-    if head is None or head.next is None:
-        return False
-
     slow = head
-    fast = head.next
+    fast = head
 
-    while(fast is not None and fast.next is not None):
-        if slow == fast:
-            return True
+    while fast is not None and fast.next is not None:
         fast = fast.next.next
         slow = slow.next
+        if slow == fast:
+            return True
 
     return False
 
-#testing
+# testing
+
 import unittest
-
 class TestLongestPalindromicSubstring(unittest.TestCase):
-
     def test_addition(self):
         fourth = LinkedListNode(9, None)
         third = LinkedListNode(6, fourth)
