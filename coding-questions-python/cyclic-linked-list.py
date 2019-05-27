@@ -56,4 +56,8 @@ class TestLongestPalindromicSubstring(unittest.TestCase):
 
         self.assertEqual(checkCyclic(None), False)
 
+        singleton = LinkedListNode(31, None)
+        singleton.next = singleton
+        self.assertEqual(checkCyclic(singleton), True)
+
 unittest.main()
