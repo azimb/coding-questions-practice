@@ -10,6 +10,8 @@ determine the maximum amount of money you can rob tonight without alerting the p
 
 Time complexity = linear?
 Space complexity = O(N) where N = len of list
+
+NOTE: Leetcode says time exceeded -- verify this
 '''
 
 def determineMaxProfit(houseList):
