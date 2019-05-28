@@ -6,7 +6,14 @@ Longest palindromic substring:
 Reverse linked list:
     - cyclic linked list bug (fix pending)
 
-Cyclic linked list:
-    - code seems to work
-    - review pending
-    (TODO: check how to make a single point itself)
+Reverse sentence in c-string:
+    - feedback is given
+    - implemented the feedback, except the while loop cleanup
+    - waiting to hear about while loop clenaup
+    - TODO: add runtime
+
+House Robber:
+    - code seems to work for small inputs
+    - verify why leetcode says "time exceeded."
+    - verify runtime complexity
+    - waiting for coding style based feedback
