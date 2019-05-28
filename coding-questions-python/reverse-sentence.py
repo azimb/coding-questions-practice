@@ -15,8 +15,7 @@ def reverseSentence(cString):
     cString = myReverse(cString, 0, len(cString)-1)
 
     # let's now reverse the individual words
-    start = 0
-    end = 0
+    start = end = 0
     while end < len(cString) - 1:
         while cString[end] != ' ':
             end += 1
@@ -25,18 +24,13 @@ def reverseSentence(cString):
                 break
 
         cString = myReverse(cString, start, end-1)
-        start = end + 1
-        end += 1
-
+        start, end = end + 1, end + 1
     return cString
 
 def myReverse(cString, u, v):
     while (u < v):
-        temp = cString[u]
-        cString[u] = cString[v]
-        cString[v] = temp
-        u += 1
-        v -= 1
+        cString[u], cString[v]= cString[v], cString[u]
+        u,v = u+1, v-1
     return cString
 
 #print(reverseSentence(['h','e','l','l','o',' ', 'w','o','r','l','d']))
