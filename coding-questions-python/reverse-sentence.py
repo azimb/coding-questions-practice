@@ -24,19 +24,17 @@ def reverseSentence(cString):
     return cString
 
 def myReverse(cString, u, v):
-    while (u < v):
-        cString[u], cString[v]= cString[v], cString[u]
-        u,v = u+1, v-1
+    while u < v:
+        cString[u], cString[v] = cString[v], cString[u]
+        u, v = u + 1, v - 1
 
 # tests
 import unittest
 class TestReverseSentence(unittest.TestCase):
 
     def test_addition(self):
-        self.assertEqual(reverseSentence(['h','e','l','l','o',' ', 'w','o','r','l','d']),
-                         ['w','o','r','l','d',' ','h','e','l','l','o'])
-        self.assertEqual(reverseSentence(['h', 'e', 'l', 'l', 'o']),
-                         ['h', 'e', 'l', 'l', 'o'])
+        self.assertEqual(reverseSentence(['h','e','l','l','o',' ', 'w','o','r','l','d']), ['w','o','r','l','d',' ','h','e','l','l','o'])
+        self.assertEqual(reverseSentence(['h', 'e', 'l', 'l', 'o']), ['h', 'e', 'l', 'l', 'o'])
         self.assertEqual(reverseSentence(['h']),['h'])
         self.assertEqual(reverseSentence([]), [])
 unittest.main()
