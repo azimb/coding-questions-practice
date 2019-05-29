@@ -12,7 +12,11 @@ Idea:
 
 def reverseSentence(cString):
     #first reverse the entire c-string
-    myReverse(cString, 0, len(cString)-1)
+    #myReverse(cString, 0, len(cString)-1)
+
+    #reverse the c-string using using the built-in reverse method
+    #it reverses the list in place
+    cString.reverse()
 
     # let's now reverse the individual words
     start = end = 0
