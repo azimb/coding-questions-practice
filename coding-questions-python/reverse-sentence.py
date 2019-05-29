@@ -20,15 +20,12 @@ def reverseSentence(cString):
 
     # let's now reverse the individual words
     start = end = 0
-    while end < len(cString) - 1:
-        while cString[end] != ' ':
-            end += 1
-            if end == len(cString) - 1:
-                end += 1
-                break
-
-        myReverse(cString, start, end-1)
-        start, end = end + 1, end + 1
+    while end < len(cString):
+        if cString[end] == ' ':
+            myReverse(cString, start, end-1)
+            start = end + 1
+        end += 1
+    myReverse(cString, start, end-1)
     return cString
 
 def myReverse(cString, u, v):
