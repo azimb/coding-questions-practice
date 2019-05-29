@@ -11,21 +11,16 @@ Idea:
 '''
 
 def reverseSentence(cString):
-    #first reverse the entire c-string
-    #myReverse(cString, 0, len(cString)-1)
-
-    #reverse the c-string using using the built-in reverse method
-    #it reverses the list in place
+    # reverse the c-string using using the built-in reverse method (in place)
     cString.reverse()
 
-    # let's now reverse the individual words
+    # reverse the individual words
     start = end = 0
-    while end < len(cString):
-        if cString[end] == ' ':
+    while end <= len(cString):
+        if end == len(cString) or cString[end] == ' ':
             myReverse(cString, start, end-1)
             start = end + 1
         end += 1
-    myReverse(cString, start, end-1)
     return cString
 
 def myReverse(cString, u, v):
