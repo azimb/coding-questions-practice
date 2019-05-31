@@ -14,7 +14,8 @@ House Robber:
     - code seems to work for small inputs
     - verify why leetcode says "time exceeded."
     - verify runtime complexity
-    - waiting for coding style based feedback
+    - waiting for coding style based feedbacki
+    - check if it needs a cache to allow dynamic programming
 
 Find Missing (number):
     - code seems to work
