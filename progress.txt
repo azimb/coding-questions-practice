@@ -7,13 +7,28 @@ Reverse linked list:
     - cyclic linked list bug (fix pending)
 
 Reverse sentence in c-string:
-    - feedback is given
-    - implemented the feedback, except the while loop cleanup
-    - waiting to hear about while loop clenaup
-    - TODO: add runtime
+    - feedback given and code merged into master
+    - TODO: verify runtime
 
 House Robber:
     - code seems to work for small inputs
     - verify why leetcode says "time exceeded."
     - verify runtime complexity
     - waiting for coding style based feedback
+
+Find Missing (number):
+    - code seems to work
+    - feedback given + implemented
+    - merge pending
+
+Rotate Matrix 2D - one:
+    - code seems to work
+    - PR created
+    - feedback pending
+    - TODO: verify what exactly ln27 is doing
+
+Rotate Matrix 2D - two:
+    - unclear understanding
+    - no code added yet
+    - read explanation here:
+    https://www.geeksforgeeks.org/inplace-rotate-square-matrix-by-90-degrees/
