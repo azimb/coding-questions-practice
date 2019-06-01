@@ -1,5 +1,9 @@
 '''
 Write a function that takes a string as input and reverse only the vowels of a string.
+
+Runtime: O(N)
+
+Space complexity: constant
 '''
 def reverseVowels(str):
     if str is None:
