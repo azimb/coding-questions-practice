@@ -3,7 +3,7 @@ Write a function that takes a string as input and reverse only the vowels of a s
 
 Runtime: O(N)
 
-Space complexity: constant
+Space complexity: constant (not considering the space required for the input).
 '''
 def reverseVowels(str):
     if str is None:
