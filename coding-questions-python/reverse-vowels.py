@@ -38,4 +38,5 @@ class TestReverseVowels(unittest.TestCase):
         self.assertEqual(reverseVowels("fry"), "fry")
         self.assertEqual(reverseVowels("racecar, coding is awesome"),"recocer, cading is owasema")
         self.assertEqual(reverseVowels(""), "")
+        self.assertEqual(reverseVowels(None), None)
 unittest.main()
