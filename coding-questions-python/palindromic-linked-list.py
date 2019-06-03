@@ -22,34 +22,64 @@ class LinkedListNode:
         self.val, self.next = val, next
 
 def checkPalindrome(listNode):
+    # edge case
+    if listNode is None:
+        return True
+
     slow = listNode
     fast = listNode
 
+    # find slow, which is the middle of the list
     while fast is not None and fast.next is not None:
         slow = slow.next
         fast = fast.next.next
 
-        prevNode = slow
-        curNode = prevNode.next
-        nextNode = curNode.next
+    # reverse the second half of the list
+    result = reverseLinkedList(slow)
+    slow.next = None
 
-        prevNode.next = None
+    # iterate over the "two" linked lists
+    headOfListOne = listNode
+    headOfListTwo = result
 
-        while nextNode is not None:
-            curNode.next = prevNode
-            #prevNode.next = None
+    # keep going until both the lists have nodes
+    while(headOfListOne and headOfListTwo is not None):
+        # if the values of the nodes match, set the pointer to next and continue
+        if(headOfListOne.val == headOfListTwo.val):
+            headOfListOne = headOfListOne.next
+            headOfListTwo = headOfListTwo.next
+            continue
+        # values are different, indicated non-palindromic -- return False
+        return False
+    # while loop finished, all nodes matched -- return True
+    return True
 
-            prevNode = curNode
-            curNode = nextNode
-            nextNode = nextNode.next
+def reverseLinkedList(head):
+    # empty list
+    if head is None:
+        return None
 
-        curNode.next = prevNode
-        prevNode.next = None
+    # singleton
+    elif head.next is None:
+        return head
 
+    # generic case
+    else:
+        prev = head
+        current = prev.next
+        next = current.next
 
-fourth = LinkedListNode(9, None)
-third = LinkedListNode(6, fourth)
-second = LinkedListNode(5, third)
-head = LinkedListNode(2, second)
+        prev.next is None
 
-checkPalindrome(head)
+        while next is not None:
+            current.next = prev
+            prev = current
+            current = next
+            next = current.next
+
+        current.next = prev
+        head.next = None
+
+        return current
+
+# all leet code tests passed
