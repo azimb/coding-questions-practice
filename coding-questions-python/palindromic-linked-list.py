@@ -17,3 +17,39 @@ Can we tackle this problem using a different approach that dones't use additiona
 * This solution gives the same runtime complexity O(N) but constant O(1) space complexity.
 '''
 
+class LinkedListNode:
+    def __init__(self, val, next):
+        self.val, self.next = val, next
+
+def checkPalindrome(listNode):
+    slow = listNode
+    fast = listNode
+
+    while fast is not None and fast.next is not None:
+        slow = slow.next
+        fast = fast.next.next
+
+        prevNode = slow
+        curNode = prevNode.next
+        nextNode = curNode.next
+
+        prevNode.next = None
+
+        while nextNode is not None:
+            curNode.next = prevNode
+            #prevNode.next = None
+
+            prevNode = curNode
+            curNode = nextNode
+            nextNode = nextNode.next
+
+        curNode.next = prevNode
+        prevNode.next = None
+
+
+fourth = LinkedListNode(9, None)
+third = LinkedListNode(6, fourth)
+second = LinkedListNode(5, third)
+head = LinkedListNode(2, second)
+
+checkPalindrome(head)
