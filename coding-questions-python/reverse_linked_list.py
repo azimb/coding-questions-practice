@@ -67,6 +67,7 @@ def reverseLinkedList(head):
             next = current.next
 
         current.next = prev
+        head.next = None
         return current
 
 fourth = LinkedListNode(9, None)
