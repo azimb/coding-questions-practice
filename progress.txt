@@ -4,7 +4,9 @@ Longest palindromic substring:
     - feedback implementation pending
 
 Reverse linked list:
-    - cyclic linked list bug (fix pending)
+    - All bugs are fixed
+    - Code seems to work
+    - Feedback pending
 
 Reverse sentence in c-string:
     - feedback given and code merged into master
@@ -33,3 +35,7 @@ Rotate Matrix 2D - two:
     - no code added yet
     - read explanation here:
     https://www.geeksforgeeks.org/inplace-rotate-square-matrix-by-90-degrees/
+
+Palindromic Linked List:
+    - code seems to work
+    - pr is up, feedback is pending
