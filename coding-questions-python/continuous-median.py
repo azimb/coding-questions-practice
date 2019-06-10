@@ -32,9 +32,21 @@ def get_medians(arr):
     medians = []
 
     for num in arr:
+
         add_number(num, lowers, highers)
         rebalance(lowers, highers)
         medians.append(get_median(lowers, highers))
+
+        '''
+        #Just this piece of code here should work 
+        #Using this also means that we don't need the helpers add_num and rebalance
+        
+        heapq.heappush(highers, num)
+        heapq.heappush(lowers, -heapq.heappop(highers))
+        if len(highers) < len(lowers):
+            heapq.heappush(highers, -heapq.heappop(lowers))
+        medians.append(get_median(lowers, highers))
+        '''
 
     return medians
 
