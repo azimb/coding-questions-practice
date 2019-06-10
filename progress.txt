@@ -40,3 +40,8 @@ Palindromic Linked List:
     - code seems to work
     - feedback given: code can be cleaned up
     - better solution from leetcode (url is living on messenger)
+
+Check Equal Numbers:
+    - code seems to work / manual test cases pass
+    - PR is up
+    - waiting for feedback
