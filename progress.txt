@@ -38,4 +38,5 @@ Rotate Matrix 2D - two:
 
 Palindromic Linked List:
     - code seems to work
-    - pr is up, feedback is pending
+    - feedback given: code can be cleaned up
+    - better solution from leetcode (url is living on messenger)
