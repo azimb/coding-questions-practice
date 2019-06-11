@@ -45,3 +45,8 @@ Check Equal Numbers:
     - code seems to work / manual test cases pass
     - PR is up
     - waiting for feedback
+
+Merge sorted arrays:
+    - code seems to work
+    - both manual UT and Leetcode tests pass
+    - PR is up + waiting for feedback
