@@ -6,8 +6,13 @@ def merge_sorted_lists(sorted_lists):
 
 def merge_first_two(sorted_lists):
     updated = []
-    for i in range(0, len(sorted_lists) - 1, 2):
-        result = merge(sorted_lists[i], sorted_lists[i+1])
+    for i in range(0, len(sorted_lists), 2):
+        #odd length
+        if i == len(sorted_lists) - 1:
+            result = sorted_lists[i]
+        #even lengths
+        else:
+            result = merge(sorted_lists[i], sorted_lists[i+1])
         updated.append(result)
     return updated
 
@@ -33,4 +38,18 @@ def copy_remaining(list_one, list_two, index):
     for i in range(index, len(list_two)):
         list_one.append(list_two[i])
 
-print(merge_sorted_lists( [[1,3,5,7],[2,4,6,8],[10,12,14,16],[9,11,13,15]] ))
+import unittest
+class TestMergeKSortedLists(unittest.TestCase):
+
+    def test_addition(self):
+        self.assertEqual( merge_sorted_lists([[1,3,5,7],[2,4,6,8],[10,12,14,16],[9,11,13,15]]),
+                          [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]) #general case
+        self.assertEqual( merge_sorted_lists([[3,5,7],[6,8],[10,12,14,16],[9,11,13]]),
+                          [3,5,6,7,8,9,10,11,12,13,14,16]) #even len with diff sizes
+        self.assertEqual( merge_sorted_lists([[3,5,7],[6,8],[10,12,14,16],[9,11,13], [21,22]]),
+                          [3,5,6,7,8,9,10,11,12,13,14,16,21,22]) #odd case
+        self.assertEqual( merge_sorted_lists([[],[10,20], [30,40], []]),
+                          [10,20,30,40]) #case involving empty lists
+        #self.assertEqual(merge_sorted_lists([]),[]) #singleton
+        #TODO: currently can't handle singleton lists
+unittest.main()
