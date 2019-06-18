@@ -1,4 +1,18 @@
+'''
+Given k sorted arrays of possibly different sizes, merge them and print the sorted output.
+
+Approach:
+- first merge arrays into groups of 2
+- after first merging, we have k/2 arrays
+- we again merge arrays in groups, now we have k/4 arrays
+- we keep doing it unit we have one array left
+
+The time complexity of this solution would O(nk Log k) where n is the length of sorted lists.
+'''
+
 def merge_sorted_lists(sorted_lists):
+    if not sorted_lists:
+        return sorted_lists
     if len(sorted_lists) == 1:
         return sorted_lists[0]
     result = merge_first_two(sorted_lists)
@@ -50,6 +64,6 @@ class TestMergeKSortedLists(unittest.TestCase):
                           [3,5,6,7,8,9,10,11,12,13,14,16,21,22]) #odd case
         self.assertEqual( merge_sorted_lists([[],[10,20], [30,40], []]),
                           [10,20,30,40]) #case involving empty lists
-        #self.assertEqual(merge_sorted_lists([]),[]) #singleton
-        #TODO: currently can't handle singleton lists
+        self.assertEqual(merge_sorted_lists([]),[]) #singleton
+        self.assertEqual(merge_sorted_lists(None), None) #edge case -- None
 unittest.main()
