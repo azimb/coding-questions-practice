@@ -46,7 +46,8 @@ Check Equal Numbers:
     - PR is up
     - waiting for feedback
 
-Merge sorted arrays:
-    - code seems to work
-    - both manual UT and Leetcode tests pass
-    - PR is up + waiting for feedback
+Merge k sorted arrays:
+    - code works
+    - PR is up
+    - code approved 
+    - waiting on additional feedback regarding code cleanup
