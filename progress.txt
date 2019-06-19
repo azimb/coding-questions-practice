@@ -51,3 +51,8 @@ Merge k sorted arrays:
     - PR is up
     - code approved 
     - waiting on additional feedback regarding code cleanup
+
+Merge two (sorted) linked lists:
+    - code seems to work
+    - leetcode tests pass, unit tests pending
+    - PR is _NOT_ up yet
