@@ -40,17 +40,14 @@ def merge(list_one, list_two):
         else:
             result.append(list_two[v])
             v += 1
-    if v < len(list_two):
-        copy_remaining(result, list_two, v)
 
-    if u < len(list_one):
-        copy_remaining(result, list_one, u)
+    for i in range(v, len(list_two)):
+        result.append(list_two[i])
+
+    for i in range(u, len(list_one)):
+        result.append(list_one[i])
 
     return result
-
-def copy_remaining(list_one, list_two, index):
-    for i in range(index, len(list_two)):
-        list_one.append(list_two[i])
 
 import unittest
 class TestMergeKSortedLists(unittest.TestCase):
