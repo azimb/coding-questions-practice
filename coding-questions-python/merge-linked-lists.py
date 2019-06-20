@@ -2,6 +2,14 @@ class LinkedListNode:
     def __init__(self, val, next):
         self.val, self.next = val, next
 
+    def __eq__(self, other):
+        head = self
+        while head and other:
+            if head.val != other.val:
+                return False
+            head, other = head.next, other.next
+        return head is None and other is None
+
 def merge_sorted(head_one, head_two):
     dummyNode = LinkedListNode(0, None)
     tail = dummyNode
@@ -28,19 +36,8 @@ def merge_sorted(head_one, head_two):
 
 # tests
 
-#trivial test
-second_one = LinkedListNode(5, None)
-head_one = LinkedListNode(2, second_one)
-second_two = LinkedListNode(3, None)
-head_two = LinkedListNode(1, second_two)
-result = merge_sorted(head_one, head_two)
-while result is not None:
-    print(result.val)
-    result = result.next
-
 ''' 
 leetcode tests
-
 All tests passed on leetcode
 Runtime: 28 ms, faster than 63.70% of Python online submissions 
     for Merge Two Sorted Lists.
