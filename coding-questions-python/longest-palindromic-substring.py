@@ -1,27 +1,19 @@
 '''
-Given a string, find the longest substring which is palindrome. For example, if the given string is “forgeeksskeegfor”, the output should be “geeksskeeg”.
+Given a string, find the longest substring which is palindrome. For example, if the given string is forgeeksskeegfor,
+the output should be geeksskeeg.
 
 Suggested approach:
 Dynamic programming -- maintain a 2D array that stores a boolean at each index
 	- if inex i,j is true, that means that the substring from index i to j (inclusive) is a palindrome
 This way, we can use pre-computed results of smaller lengths to find the current result for the (current) lengths
 '''
-
-
-def init():
-	print(dummy)
-
 def longestPalindromicSubstring(str):
 	cache = []
 	longestLength = -1
 	longestSubstring = ""
-
 	
 	#init 2D array with False at all indices
-	for i in range(len(str)):
-		cache.append([])
-		for j in range(len(str)):
-			cache[i].append(False)
+	cache = [[0 for x in range(len(str))] for y in range(len(str))]
 
 	#set the values for substrings of length 1 and 2
 	for i in range(len(cache)):
@@ -44,14 +36,11 @@ def longestPalindromicSubstring(str):
 				longestSubstring = setSubstring(str, j, k, longestSubstring, longestLength)
 				longestLength = len(longestSubstring)
 	return longestSubstring
-
-def getSubstring(str, i, j):
-	return str[i:j+1]
 		
 def setSubstring(str, i, j, longestSubstring, longestLength):
 	#global longestLength
 	#global longestSubstring
-	substring = getSubstring(str, i, j)
+	substring = str[i:j+1]
 	if len(substring) > longestLength:
 		longestLength = len(substring)
 		longestSubstring = substring
