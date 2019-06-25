@@ -3,7 +3,7 @@ Write a function that compares a binary and a hexadecimal and returns true if th
 '''
 
 def check_num_equality(bin, hex):
-    return convert_from_base(str(bin)[2:], 2) == convert_from_base(str(hex)[2:], 16)
+    return convert_from_base(bin[2:], 2) == convert_from_base(hex[2:], 16)
 
 def convert_from_base(num, base):
     oct_dictionary = {'a': "10", 'b': "11", 'c': "12", 'd': "13", 'e': "14", 'f': "15"}
