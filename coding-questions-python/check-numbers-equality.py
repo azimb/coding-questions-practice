@@ -21,11 +21,11 @@ import unittest
 class TestCheckNumEquality(unittest.TestCase):
 
     def test_addition(self):
-        self.assertEqual(check_num_equality(bin(47), hex(47)), True)
-        self.assertEqual(check_num_equality(bin(20), hex(15)), False)
-        self.assertEqual(check_num_equality(bin(11), hex(11)), True)
-        self.assertEqual(check_num_equality(bin(0), hex(10)), False)
-        self.assertEqual(check_num_equality(bin(10), hex(0)), False)
-        self.assertEqual(check_num_equality(bin(0), hex(0)), True)
+        self.assertTrue(check_num_equality(bin(47), hex(47)))
+        self.assertFalse(check_num_equality(bin(20), hex(15)))
+        self.assertTrue(check_num_equality(bin(11), hex(11)))
+        self.assertFalse(check_num_equality(bin(0), hex(10)))
+        self.assertFalse(check_num_equality(bin(10), hex(0)))
+        self.assertTrue(check_num_equality(bin(0), hex(0)))
 
 unittest.main()
