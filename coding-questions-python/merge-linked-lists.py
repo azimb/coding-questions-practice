@@ -34,7 +34,63 @@ def merge_sorted(head_one, head_two):
 
     return dummyNode.next
 
+#utility method to convert a an array to a linked list
+def array_to_linked_list(arr):
+    if arr is None: return None
+    current = None
+    for i in range(len(arr)-1, -1, -1):
+        new_node = LinkedListNode(arr[i], current)
+        current = new_node
+    return current
+
 # tests
+import unittest
+class TestMergeLinkedLists(unittest.TestCase):
+    def test_addition(self):
+        linked_list_one = array_to_linked_list([1, 2, 3])
+        linked_list_two = array_to_linked_list([4, 5, 6])
+        result = array_to_linked_list([1, 2, 3, 4, 5, 6])
+        self.assertEqual(merge_sorted(linked_list_one, linked_list_two) == result, True)
+
+        linked_list_one = array_to_linked_list([1, 3, 5])
+        linked_list_two = array_to_linked_list([2, 4, 6])
+        result = array_to_linked_list([1, 2, 3, 4, 5, 6])
+        self.assertEqual(merge_sorted(linked_list_one, linked_list_two) == result, True)
+
+
+        linked_list_one = array_to_linked_list([7, 8])
+        linked_list_two = array_to_linked_list([2, 3, 4, 5])
+        result = array_to_linked_list([2,3,4,5,7,8])
+        self.assertEqual(merge_sorted(linked_list_one, linked_list_two) == result, True)
+
+
+        linked_list_one = array_to_linked_list([1])
+        linked_list_two = array_to_linked_list(None)
+        result = array_to_linked_list([1])
+        self.assertEqual(merge_sorted(linked_list_one, linked_list_two) == result, True)
+
+
+        linked_list_one = array_to_linked_list(None)
+        linked_list_two = array_to_linked_list([5])
+        result = array_to_linked_list([5])
+        self.assertEqual(merge_sorted(linked_list_one, linked_list_two) == result, True)
+
+        linked_list_one = array_to_linked_list([1])
+        linked_list_two = array_to_linked_list([])
+        result = array_to_linked_list([1])
+        self.assertEqual(merge_sorted(linked_list_one, linked_list_two) == result, True)
+
+        linked_list_one = array_to_linked_list([])
+        linked_list_two = array_to_linked_list([4])
+        result = array_to_linked_list([4])
+        self.assertEqual(merge_sorted(linked_list_one, linked_list_two) == result, True)
+        
+        linked_list_one = array_to_linked_list([])
+        linked_list_two = array_to_linked_list([])
+        result = array_to_linked_list([])
+        self.assertEqual(merge_sorted(linked_list_one, linked_list_two) == result, True)
+
+unittest.main()
 
 ''' 
 leetcode tests
