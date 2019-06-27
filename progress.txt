@@ -1,7 +1,7 @@
 Longest palindromic substring:
     - code seems to work
-    - feedback is given
-    - feedback implementation pending
+    - feedback is given and implemeted
+    - there is question on feedback, answer pending
 
 Reverse linked list:
     - All bugs are fixed
@@ -41,18 +41,20 @@ Palindromic Linked List:
     - feedback given: code can be cleaned up
     - better solution from leetcode (url is living on messenger)
 
-Check Equal Numbers:
-    - code seems to work / manual test cases pass
-    - PR is up
-    - waiting for feedback
-
-Merge k sorted arrays:
-    - code works
-    - PR is up
-    - code approved 
-    - waiting on additional feedback regarding code cleanup
-
 Merge two (sorted) linked lists:
     - code seems to work
-    - leetcode tests pass, unit tests pending
-    - PR is _NOT_ up yet
+    - leetcode tests pass
+    - unit tests pass
+    - merge approval pending
+
+Maximum subarray:
+    - code seems to work and UT pass
+    - feedback pending
+    - some leetcode tests give "time exceeded error"
+    - look at leetcode solutions to use a better approach than the current
+    O(N^2) approach
+
+Length of last word:
+    - code works 
+    - UT and leetcode tests pass
+    - PR is up and review is pending
