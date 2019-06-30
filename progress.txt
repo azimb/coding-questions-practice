@@ -54,12 +54,6 @@ Maximum subarray:
     - look at leetcode solutions to use a better approach than the current
     O(N^2) approach
 
-Length of last word:
-    - code works 
-    - UT and leetcode tests pass
-    - feedback: currently, a flag is used to verify if we are looking at the "actual" last word. An extension to this problem is to find the last but nth word from the sentence. A flag can be used to track the number of words seen, or a helper function can be used to skip n words (verify this). Either option must be explored in a brand new problem which will extent the current problem.
-    - current problem's PR can be closed.
-
 Plus one:
     - code works
     - UT and leetcode tests pass
