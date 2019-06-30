@@ -1,22 +1,18 @@
+
 '''
 Given two binary strings, return their sum (also a binary string).
 The input strings are both non-empty and contains only characters 1 or 0.
-
 Leetcode: https://leetcode.com/problems/add-binary/
-
 Approach:
     - convert each bin string to a decimal
     - add the decimals together
     - convert the sum into a bin string
-
 Runtime complexity:
     - bin str to dec -- O(N)
     - (dec) sum to bin -- O(N)
     - total runtime -- O(N)
-
 Space complexity:
     - constant, except the bin string that is being returned
-
 #TODO: try implementing your own 'bin' function
 '''
 
@@ -44,4 +40,4 @@ class TestAddBinary(unittest.TestCase):
 unittest.main()
 
 #all leetcode tests pass
-#Runtime: 16 ms, faster than 96.36% of Python online submissions for Add Binary.
+#Runtime: 16 ms, faster than 96.36% of Python online submissions for Add Binary. 
