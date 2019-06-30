@@ -57,9 +57,19 @@ Maximum subarray:
 Length of last word:
     - code works 
     - UT and leetcode tests pass
-    - PR is up and review is pending
+    - feedback: currently, a flag is used to verify if we are looking at the "actual" last word. An extension to this problem is to find the last but nth word from the sentence. A flag can be used to track the number of words seen, or a helper function can be used to skip n words (verify this). Either option must be explored in a brand new problem which will extent the current problem.
+    - current problem's PR can be closed.
 
 Plus one:
     - code works
     - UT and leetcode tests pass
-    - PR i sup and review is pending
+    - Shridhar sent some good code for this problem
+
+Add binary:
+    - code works
+    - feedback: why convert to decimal? Can you add two bin strings directly?
+
+sqrt:
+    - both iterative and recursive approaches seem to work
+    - leetcode gives "time exceeded" error for both
+    - explore a binary search approach for this problem to limit the "possible" numbers
