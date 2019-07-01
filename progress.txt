@@ -60,10 +60,11 @@ Plus one:
     - Shridhar sent some good code for this problem
 
 Add binary:
-    - code works
-    - feedback: why convert to decimal? Can you add two bin strings directly?
+    - feedback implemeted -- adding binary strings directly
+    - code is messier so seeking another round of feedback
 
 sqrt:
-    - both iterative and recursive approaches seem to work
-    - leetcode gives "time exceeded" error for both
-    - explore a binary search approach for this problem to limit the "possible" numbers
+    - implemented binary search approach
+    - UT and leetcode tests pass
+    - understanding is not crystal clear
+    - waiting for feedback
