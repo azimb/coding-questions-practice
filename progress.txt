@@ -68,3 +68,20 @@ sqrt:
     - UT and leetcode tests pass
     - understanding is not crystal clear
     - waiting for feedback
+
+
+Remove duplicates:
+    - both LC tests and UT pass
+    - sent code for review
+
+Is same tree:
+    - code seems to work
+    - LC tests pass
+    - UT pending
+    - will put it up for review when UT are done
+
+max depth of binary tree:
+    - code seems to work
+    - LC tests pass
+    - UT pending
+    - will put up the code for review when UT are added
