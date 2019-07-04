@@ -91,4 +91,19 @@ max depth of binary tree:
 * some problems missing here that live on leetcode *
 
 is tree symmetric:
-    - code works -- it's currently living on leetcode
+    - code works
+    - leetcode tests pass
+    - unit tests pending
+    - code needs to be pushed on to the remote repo
+
+is tree balanced:
+    - code works
+    - leetcode tests pass
+    - unit tests pending
+    - code needs to be pused on to the remote repo
+
+are trees same:
+    - code works
+    - leetcode tests pass
+    - UT pending
+    - code needs to be pused on GitHub
