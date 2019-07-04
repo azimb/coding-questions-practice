@@ -85,3 +85,10 @@ max depth of binary tree:
     - LC tests pass
     - UT pending
     - will put up the code for review when UT are added
+
+
+
+* some problems missing here that live on leetcode *
+
+is tree symmetric:
+    - code works -- it's currently living on leetcode
