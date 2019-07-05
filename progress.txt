@@ -112,3 +112,9 @@ hasPathSum:
     - code works
     - leetcode tests pass
     - UT pending
+
+pascal's triangle one
+    - code works on leetcode
+    - complexity analysis and UT pending
+    - not sure if the code has the most efficient approach
+    - LC gave sols, check those
