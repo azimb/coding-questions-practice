@@ -22,21 +22,40 @@ Space complexity:
 '''
 
 def maxProfit(prices):
-    # index i will store the max price of the stock from day i to the end
-    max_tracker = [0 for x in range(len(prices))]
-
-    # iterate backwards to record the maximum price so far
-    current_max = 0
-    for i in range(len(prices) - 1, -1, -1):
-        if prices[i] > current_max:
-            current_max = prices[i]
-        max_tracker[i] = current_max
-
-    # for each price, calculate profit by using the maximum selling price if sold in the remaining days
+    if not prices or len(prices) == 1: return -1
     max_profit = 0
-    for j in range(len(prices) - 1):
-        current_profit = max_tracker[j + 1] - prices[j]
-        if current_profit > max_profit:
-            max_profit = current_profit
+    current_min = prices[0]
+
+    for price in prices:
+        current_min = min(current_min, price)
+        current_profit = price - current_min
+        max_profit = max(max_profit, current_profit)
 
     return max_profit
+
+# all leetcode tests pass
+# Runtime: 48 ms, faster than 79.95% of Python online submissions for Best Time to Buy and Sell Stock.
+
+'''
+#dynamic programming approach
+def maxProfit(prices):
+
+        # index i will store the max price of the stock from day i to the end
+        max_tracker = [0 for x in range(len(prices))]
+
+        # iterate backwards to record the maximum price so far
+        current_max = 0
+        for i in range(len(prices) - 1, -1, -1):
+            if prices[i] > current_max:
+                current_max = prices[i]
+            max_tracker[i] = current_max
+
+        # for each price, calculate profit by using the maximum selling price if sold in the remaining days
+        max_profit = 0
+        for j in range(len(prices) - 1):
+            current_profit = max_tracker[j + 1] - prices[j]
+            if current_profit > max_profit:
+                max_profit = current_profit
+
+        return max_profit
+'''
