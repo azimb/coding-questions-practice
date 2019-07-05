@@ -107,3 +107,8 @@ are trees same:
     - leetcode tests pass
     - UT pending
     - code needs to be pused on GitHub
+
+hasPathSum:
+    - code works
+    - leetcode tests pass
+    - UT pending
