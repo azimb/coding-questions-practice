@@ -6,8 +6,7 @@ Ex:-
 Leetcode problem: https://leetcode.com/problems/pascals-triangle/
 '''
 
-
-def generate(numRows):
+'''def generate(numRows):
     if numRows is 0: return []
 
     result = [[1]]
@@ -23,3 +22,8 @@ def generate_helper(numRows, result):
         result.append(newLevel)
 
     return result
+'''
+
+def generate(numRows):
+    result = [[1]]
+    for i in range
