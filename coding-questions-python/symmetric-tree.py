@@ -37,3 +37,11 @@ def areMirror(tree_one, tree_two):
 
         else:
             return tree_one.val == tree_two.val and areMirror(tree_one.right, tree_two.left) and areMirror(tree_one.left, tree_two.right)
+
+#solution provided by Shridhar
+'''
+if not tree_one or not tree_two: 
+    return not tree_one and not tree_two 
+
+return tree_one.val == .....
+'''
