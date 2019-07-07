@@ -61,7 +61,8 @@ Plus one:
 
 Add binary:
     - feedback implemeted -- adding binary strings directly
-    - code is messier so seeking another round of feedback
+    - Code is messy
+    - Shridhar gave his code (haven't looked at it yet)
 
 sqrt:
     - implemented binary search approach
@@ -72,7 +73,7 @@ sqrt:
 
 Remove duplicates:
     - both LC tests and UT pass
-    - sent code for review
+    - review pending
 
 Is same tree:
     - code seems to work
@@ -94,7 +95,8 @@ is tree symmetric:
     - code works
     - leetcode tests pass
     - unit tests pending
-    - code needs to be pushed on to the remote repo
+    - feeback -- code looks good but cleaner code provided by Shridhar
+      (haven't looked at it yet)
 
 is tree balanced:
     - code works
@@ -112,6 +114,15 @@ hasPathSum:
     - code works
     - leetcode tests pass
     - UT pending
+    - feedback: approved
+      (just double check space complexity before merging)
+
+Buy and Sell Stocks
+    - code works
+    - LC tests pass, UT pending
+    - my solution uses extra space (which seems okay) 
+    - still implemented constant space algo from a youtube video
+    - this one needs feedback before merging
 
 pascal's triangle one
     - code works on leetcode
