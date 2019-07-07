@@ -86,6 +86,26 @@ def bin_to_dec(bin_str):
             result += (2**(len(bin_str) - 1 - i))
     return result
 
+
+'''
+#shirdhar's solution
+def addBinary(self, a: str, b: str) -> str:
+        sum_lst = []
+        carry = 0
+        for digit_a, digit_b in itertools.zip_longest(reversed(a), reversed(b), fillvalue='0'):
+            carry += int(digit_a) + int(digit_b)
+            carry, rem = divmod(carry, 2)
+            sum_lst.append(rem)
+        
+        assert carry <= 1
+        if carry == 1:
+            sum_lst.append(carry)
+        
+        return "".join(str(digit) for digit in reversed(sum_lst))
+'''
+
+
+
 # tests
 import unittest
 class TestAddBinary(unittest.TestCase):
