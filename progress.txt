@@ -124,8 +124,36 @@ Buy and Sell Stocks
     - still implemented constant space algo from a youtube video
     - this one needs feedback before merging
 
-pascal's triangle one
+Pascal's triangle one
     - code works on leetcode
     - complexity analysis and UT pending
     - not sure if the code has the most efficient approach
     - LC gave sols, check those
+
+Valid Palindrome:
+    - code doesn't work -- there seems to be a bug
+    
+Single Number:
+    - code is living on LC
+    - all LC tests pass
+    - pending: write code locally, make thorough unit tests, and put it up for review
+    
+Min Stack:
+    - code is living on LC
+    - all LC tests pass
+    - pending: write code locally, make thorough unit tests, and put it up for review
+
+Two Sum II - input array is sorted
+    - code is living on LC
+    - all LC tests pass
+    - pending: write code locally, make thorough unit tests, and put it up for review
+ 
+Factorial Trailing Zeroes:
+    - code is living on LC
+    - all LC tests pass
+    - pending: write code locally, make thorough unit tests, and put it up for review
+    
+Rotate Array:
+    - code is living on LC
+    - all LC tests pass
+    - pending: write code locally, make thorough unit tests, and put it up for review
