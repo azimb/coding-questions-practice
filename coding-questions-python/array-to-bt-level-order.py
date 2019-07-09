@@ -58,7 +58,6 @@ class TestArrayToBinraryTree(unittest.TestCase):
         test_one_arr = [1, 3, 17, 4, 8, 11, 18]
         self.assertTrue(convert_array_to_bt_level_order_fashion(test_one_arr) == self.one)
 
-
         # case where leafs are at different levels
         self.test_init()
         self.one.left, self.one.right = self.three, self.seventeen
@@ -66,17 +65,24 @@ class TestArrayToBinraryTree(unittest.TestCase):
         self.four.right = self.eight
 
         test_two_arr = [1, 3, 17, 4, None, None, None, None, 8]
-        self.assertEqual(convert_array_to_bt_level_order_fashion(test_two_arr), self.one)
+        self.assertTrue(convert_array_to_bt_level_order_fashion(test_two_arr) == self.one)
 
-
-        # case where binary tree is linear
+        # case where binary tree is linear (only right childs)
         self.test_init()
-        self.one.left = self.three
-        self.three.left = self.eleven
-        self.eleven.left = self.eight
+        self.one.right = self.four
+        self.four.right = self.seventeen
+        self.seventeen.right = self.eighteen
 
-        #FIXME: this test fails
-        test_three_arr = [1, 3, None, 11, None, None, None, 8]
-        #self.assertEqual(convert_array_to_bt_level_order_fashion(test_three_arr), self.one)
+        test_three_arr = [1, None, 4, None, None, None, 17, None, None, None, None, None, None, None, 18]
+        self.assertTrue(convert_array_to_bt_level_order_fashion(test_three_arr) == self.one)
+
+        # case where binary tree is singleton
+        self.test_init()
+        test_four_arr = [17]
+        self.assertTrue(convert_array_to_bt_level_order_fashion((test_four_arr)) == self.seventeen)
+
+        # edge case -- empty list
+        self.test_init()
+        self.assertTrue(convert_array_to_bt_level_order_fashion([]) is None)
 
 unittest.main()
