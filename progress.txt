@@ -157,3 +157,7 @@ Rotate Array:
     - code is living on LC
     - all LC tests pass
     - pending: write code locally, make thorough unit tests, and put it up for review
+    
+Construct a complete binary tree from given array in level order fashion:
+    - code written with the help of an example from GeeksForGeeks
+    - UT pass, waiting for feedback
