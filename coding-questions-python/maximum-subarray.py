@@ -2,38 +2,42 @@
 Given an integer array nums, find the contiguous subarray (containing at least one number)
 which has the largest sum and return its sum.
 
-Approach:
+Approach (discarded as it's too inefficient)
 - maintain a 2D array that stores a number that each index
 - the number at index i,j is the sum of the sub array starting at index i and ending at index j
 - runtime complexity:
 - space complexity: O(N^2) where N is the length of the input array
 
-#TODO: discuss runtime complexity
+Optimized solution:
+    - this problem can be solved in a linear time with the help for Kadane's algorithm
+    (https://www.google.com/search?client=ubuntu&channel=fs&q=kadane%27s+algorithm&ie=utf-8&oe=utf-8)
+    (https://www.geeksforgeeks.org/largest-sum-contiguous-subarray/)
+    - keep a track of max_so_far and global_max
+    - max_so_far at index i will indicate the max sum of subarray ending at index i
+
+    - for each elem, the max_so_far will be either the sum of max_so_far and the elem, or the elem itself
+        based on whichever is higher
+    - basically reset the max_so_far when adding the current elem doesn't help
+    - since we want the maximum value subarray, if the  max_so_far is less than the current elem,
+        then we might as well start the array with the current elem
+    - once max_so_far exceeds the global_max, global total is set to running total
+
+    - global total is used because max_so_far may reduce as we keep iterating
+    - the idea is that starting at some indices is strictly worse than some indices before it
+
+    - runtime complexity is O(N) and space complexity is O(1)
 '''
 
+
 def maximum_subarray(input_arr):
-    #init 2D array with 0 at all indices
-    sum_tracker = [[None for x in range(len(input_arr))] for y in range(len(input_arr))]
+    if len(input_arr) == 0: return 0
 
-    #set the values of sub arrays of length 1 and 2
-    for i in range(len(input_arr)):
-        sum_tracker[i][i] = input_arr[i]
-        if i != len(input_arr) - 1:
-            sum_tracker[i][i+1] = input_arr[i] + input_arr[i+1]
+    current_max = global_max = input_arr[0]
+    for i in range(1, len(input_arr)):
+        current_max = max(current_max + input_arr[i], input_arr[i])
+        global_max = max(global_max, current_max)
 
-    #set the values of sub arrays of len length greater than 2
-    k = 0
-    for i in range(2, len(input_arr)):
-        for j in range(len(input_arr) - i):
-            k = i + j
-            sum_tracker[j][k] = input_arr[j] + input_arr[k] + sum_tracker[j+1][k-1]
-
-    #find the maximum sum from the calculated sums of each sub array
-    max = None
-    for outer in sum_tracker:
-        for inner in outer:
-            max = inner if inner > max else max
-    return 0 if max is None else max
+    return global_max
 
 #tests
 import unittest
@@ -48,3 +52,6 @@ class TestMaximumSubarray(unittest.TestCase):
         self.assertEqual(maximum_subarray([]), 0)
 
 unittest.main()
+
+# all leetcode tests pass
+# Runtime: 52 ms, faster than 70.59% of Python online submissions for Maximum Subarray
