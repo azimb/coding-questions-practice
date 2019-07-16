@@ -160,7 +160,8 @@ Rotate Array:
     
 Construct a complete binary tree from given array in level order fashion:
     - code written with the help of an example from GeeksForGeeks
-    - UT pass, waiting for feedback
+    - UT pass
+    - feedback implemented, merge pending
     
 Max sum subarray:
     - code finished, algo is efficient
