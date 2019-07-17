@@ -1,0 +1,8 @@
+Sub array sum equals k:
+https://github.com/baghadiya/coding-questions-practice/blob/subarray-sum-equals-k/coding-questions-python/subarray-sum-equals-k.py?fbclid=IwAR39g3WuXbX6cdaSJw7RyddO5PFhXOn5UYRc-fRuNTF6EMjamoT8iY43pzw
+
+Sub array max sum:
+https://github.com/baghadiya/coding-questions-practice/pull/40
+
+Array to binary tree (level order):
+https://github.com/baghadiya/coding-questions-practice/blob/array-to-bt-level-order/coding-questions-python/array-to-bt-level-order.py?fbclid=IwAR2hELyr7k08p8KwxhZGMP97chNalWF9MW8arnT4XECSg2t2oqsici95GiU
