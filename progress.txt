@@ -73,7 +73,7 @@ sqrt:
 
 Remove duplicates:
     - both LC tests and UT pass
-    - review pending
+    - feedback pending
 
 Is same tree:
     - code seems to work
@@ -95,8 +95,10 @@ is tree symmetric:
     - code works
     - leetcode tests pass
     - unit tests pending
+    - runime and space complexity discussion pending
     - feeback -- code looks good but cleaner code provided by Shridhar
       (haven't looked at it yet)
+      
 
 is tree balanced:
     - code works
@@ -115,19 +117,20 @@ hasPathSum:
     - leetcode tests pass
     - UT pending
     - feedback: approved
-      (just double check space complexity before merging)
+    - just need to verify time complexity and add space complexity
 
 Buy and Sell Stocks
     - code works
     - LC tests pass, UT pending
     - my solution uses extra space (which seems okay) 
     - still implemented constant space algo from a youtube video
-    - this one needs feedback before merging
+    - look at the LC solution (Java), write your own solution (Python), and then put it up for review
 
 Pascal's triangle one
     - code works on leetcode
     - complexity analysis and UT pending
     - not sure if the code has the most efficient approach
+    - feedback: can you do better?
     - LC gave sols, check those
 
 Valid Palindrome:
@@ -162,6 +165,10 @@ Construct a complete binary tree from given array in level order fashion:
     - code written with the help of an example from GeeksForGeeks
     - UT pass
     - feedback implemented, merge pending
+    
+Happy number:
+    - code looks good
+    - but need to prove why all happy numbers wil add up to 4 (follow the 8 numbers cycle)
     
 Max sum subarray:
     - code finished, algo is efficient
