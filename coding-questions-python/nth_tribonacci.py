@@ -36,13 +36,13 @@ def nth_tribonacci_iterative(n):
     if n == 0: return 0
     if n == 1 or n == 2: return 1
 
-    most_recent_tribonacci_numbers = [0,1,1]
+    most_recent = [0,1,1]
 
     for i in range(3, n+1):
-        current_fibonacci_number = most_recent_tribonacci_numbers[0] + most_recent_tribonacci_numbers[1] + most_recent_tribonacci_numbers[2]
-        most_recent_tribonacci_numbers[0], most_recent_tribonacci_numbers[1], most_recent_tribonacci_numbers[2] = most_recent_tribonacci_numbers[1], most_recent_tribonacci_numbers[2], current_fibonacci_number
+        current_fibonacci_number = most_recent[0] + most_recent[1] + most_recent[2]
+        most_recent[0], most_recent[1], most_recent[2] = most_recent[1], most_recent[2], current_fibonacci_number
 
-    return most_recent_tribonacci_numbers[2]
+    return most_recent[2]
 
 
 # tests
