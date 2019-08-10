@@ -40,14 +40,46 @@ def add_two_numbers(l1, l2):
     l1_pointer = l1
     l2_pointer = l2
 
+    counter = 0
     # this is the resultant list
     # each node's value will be a result of the addition of the corresponding values from each list
+
     sum = LinkedListNode(0, None)
     head = sum
 
     # this variable will help "carry" over a part of the sum of two nums to the next sum
     carry = 0
 
+    while l1_pointer or l2_pointer:
+
+        if counter == 20:
+            break
+
+        val_one = 0 if l1_pointer is None else l1_pointer.val
+        val_two = 0 if l2_pointer is None else l2_pointer.val
+
+
+        addition = val_one + val_two + carry
+        sum.next = LinkedListNode(addition%10, None)
+        sum = sum.next
+        carry = carry//10
+
+
+        if l1_pointer is not None: l1_pointer = l1_pointer.next
+        if l2_pointer is not None: l2_pointer = l2_pointer.next
+
+
+        counter += 1
+
+
+    if carry > 0:
+        sum.next = LinkedListNode(carry, None)
+
+
+
+    return head.next
+
+    '''
     # keep going until we reach the end of either of lists
     while l1_pointer is not None and l2_pointer is not None:
         num = l1_pointer.val + l2_pointer.val + carry
@@ -97,7 +129,7 @@ def add_two_numbers(l1, l2):
         sum = sum.next
 
     return head.next
-
+    '''
 
 
 #utility method to convert a an array to a linked list
