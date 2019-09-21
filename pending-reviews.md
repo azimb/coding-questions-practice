@@ -7,3 +7,7 @@
 * Reverse integer
     - Leetcode: https://leetcode.com/problems/reverse-integer/
     - PR: https://github.com/baghadiya/coding-questions-practice/pull/77
+    
+* String to integer (atoi)
+    - Leetcode: https://leetcode.com/problems/string-to-integer-atoi/
+    - PR: https://github.com/baghadiya/coding-questions-practice/pull/78
