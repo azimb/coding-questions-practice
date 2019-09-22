@@ -21,17 +21,23 @@ Space complexity:
 
 
 def palindromic_number(x):
+    # negative numbers can't be palindromic
     if x < 0: return False
+
+    # reverse the integer, and check for equality
     rev_x = integer_reverse(x)
     return x == rev_x
 
 
 def integer_reverse(self, x):
     rev = 0
+    # while there are digits left
     while x != 0:
+        # grab the last digit, and remove it from x
         pop = x % 10
         x /= 10
 
+        # append the popped digit
         rev *= 10
         rev += pop
 
