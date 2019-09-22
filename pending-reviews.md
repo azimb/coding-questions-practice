@@ -15,3 +15,7 @@
 * Palindrome number
     - Leetcode: https://leetcode.com/problems/palindrome-number/
     - PR: https://github.com/baghadiya/coding-questions-practice/pull/79
+    
+* Integer to Roman
+    - Leetcode: https://leetcode.com/problems/integer-to-roman/
+    - PR: https://github.com/baghadiya/coding-questions-practice/pull/80
