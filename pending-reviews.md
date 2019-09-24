@@ -31,3 +31,7 @@
 * Merge intervals
     - Leetcode: https://leetcode.com/problems/merge-intervals/
     - PR: https://github.com/baghadiya/coding-questions-practice/pull/83
+
+* Binary tree level order traversal
+    - Leetcode: https://leetcode.com/problems/binary-tree-level-order-traversal/
+    - PR: https://github.com/baghadiya/coding-questions-practice/pull/84
