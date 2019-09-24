@@ -20,6 +20,10 @@
     - Leetcode: https://leetcode.com/problems/integer-to-roman/
     - PR: https://github.com/baghadiya/coding-questions-practice/pull/80
     
+* Inorder successor in BST I
+    - Leetcode: https://leetcode.com/problems/inorder-successor-in-bst/
+    - PR: https://github.com/baghadiya/coding-questions-practice/pull/82
+    
 * Inorder successor in BST II
     - Leetcode: https://leetcode.com/accounts/login/?next=/problems/inorder-successor-in-bst-ii/
     - PR: https://github.com/baghadiya/coding-questions-practice/pull/81
