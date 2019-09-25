@@ -35,3 +35,7 @@
 * Binary tree level order traversal
     - Leetcode: https://leetcode.com/problems/binary-tree-level-order-traversal/
     - PR: https://github.com/baghadiya/coding-questions-practice/pull/84
+    
+* Climb stairs
+    - Leetocode: https://leetcode.com/problems/climbing-stairs/
+    - PR: https://github.com/baghadiya/coding-questions-practice/pull/85
