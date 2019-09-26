@@ -14,6 +14,8 @@ Example 2:
 Input: coins = [2], amount = 3
 Output: -1
 
+Leetcode: https://leetcode.com/problems/coin-change/
+
 Approach:
     - a bottom up, dynamic programming approach
     - the idea is to solve subporblems optimally, so that the results of those subproblems can be used to solve
