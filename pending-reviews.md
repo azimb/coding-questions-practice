@@ -39,3 +39,10 @@
 * Climb stairs
     - Leetocode: https://leetcode.com/problems/climbing-stairs/
     - PR: https://github.com/baghadiya/coding-questions-practice/pull/85
+
+
+--
+
+* First and last position of elem in sorted array
+    - Leetcode: https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
+    - PR: https://github.com/baghadiya/coding-questions-practice/pull/90
