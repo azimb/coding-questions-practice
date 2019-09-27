@@ -63,4 +63,6 @@
     - Leetcode: https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
     - PR: https://github.com/baghadiya/coding-questions-practice/pull/90
     
-   
+* Longest increasing subsequence
+    - Leetcode: https://leetcode.com/problems/longest-increasing-subsequence/
+    - PR: https://github.com/baghadiya/coding-questions-practice/pull/91
