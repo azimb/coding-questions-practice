@@ -66,3 +66,7 @@
 * Longest increasing subsequence
     - Leetcode: https://leetcode.com/problems/longest-increasing-subsequence/
     - PR: https://github.com/baghadiya/coding-questions-practice/pull/91
+    
+* Longest increasing subsequence
+    - Leetcode: https://leetcode.com/problems/longest-common-subsequence/
+    - https://github.com/baghadiya/coding-questions-practice/pull/92
