@@ -43,6 +43,24 @@
 
 --
 
+* Unique paths i
+    - Leetcode: https://leetcode.com/problems/unique-paths/
+    - PR: https://github.com/baghadiya/coding-questions-practice/pull/86
+    
+* Max subarray sum
+    - Leetcode: https://leetcode.com/problems/maximum-subarray/
+    - PR: https://github.com/baghadiya/coding-questions-practice/pull/87
+ 
+* Coin change i
+    - Leetcode: https://leetcode.com/problems/coin-change/
+    - PR: https://github.com/baghadiya/coding-questions-practice/pull/88
+    
+* Coin change ii
+    - Leetcode: https://leetcode.com/problems/coin-change-2/
+    - PR: https://github.com/baghadiya/coding-questions-practice/pull/89
+
 * First and last position of elem in sorted array
     - Leetcode: https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
     - PR: https://github.com/baghadiya/coding-questions-practice/pull/90
+    
+   
