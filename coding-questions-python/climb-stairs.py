@@ -46,14 +46,11 @@ def climb_stairs(n):
     if n == 0 or n == 1: return 1
 
     # two variables to keep a track of climb_stairs(n-1), climb_stairs(n-2)
-    one_before_last = 1
-    last = 1
+    one_before_last = last = 1
 
     # bottom up approach, go from 2 to n and calculate the cs(n) at each stair using the two previous values
-    for i in range(2, n + 1):
-        new = one_before_last + last
-        one_before_last, last = last, new
-
+    for i in range(2, n + 1): one_before_last, last = last, one_before_last + last
+        
     return last
 
 # all leetcode tests pass
