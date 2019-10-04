@@ -30,7 +30,7 @@ def minDistance(self, word1, word2):
                     dp_arr[row][col] = dp_arr[row-1][col-1]
                 # don't match
                 else:
-                    # get the solutions to subprobelems a) last char of word1 is removed, b) last char of wrod1 is removed
+                    # get the solutions to subprobelems a) last char of word1 is removed, b) last char of wrod2 is removed
                     # 1 (as we removed it) + min of the subproblems is your answer
                     dp_arr[row][col] = 1 + min( dp_arr[row-1][col], dp_arr[row][col-1] )
         
