@@ -35,6 +35,20 @@ def lengthOfLastWord(s):
             length += 1
     return length
 
+# another simple approach -- linear time and constant space complexity
+'''
+def lengthOfLastWord(self, s):
+    # find the first non-space char
+    for i in range(len(s)-1, -1, -1):
+        if s[i] != " ":    
+            # find the first space before this char
+            for j in range(i-1, -1, -1): 
+                if s[j] == " ": return i - j
+            # no space before char(s), that means it's a single word
+            return i+1
+    # no chars, so len is 0
+    return 0
+'''
 
 # tests
 import unittest
