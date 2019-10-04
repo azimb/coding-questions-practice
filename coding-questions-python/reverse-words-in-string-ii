@@ -31,7 +31,7 @@ def reverseWords(self, li):
         self.reverse_str(li, start, len(li) - 1)
         
     
-    def reverse_str(self, string, start, end):
+def reverse_str(self, string, start, end):
         # pointer to the first and last char of string
         # swap, and move inward, and stop when they meet
         while start < end:
