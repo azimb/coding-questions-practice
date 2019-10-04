@@ -15,39 +15,32 @@ Iterate through the string in reverse. If we see a backspace character, the next
 If a character isn't skipped, it is part of the final answer.
 '''
 def backspace_string_compare(S, T):
-  skipS = skipT = 0
+        skipS = skipT = 0
         i, j = len(S) - 1, len(T) - 1
         
         # while there are chars in S or T
         while i >= 0 or j >= 0:
             # find position of next possible char in S
             while i >= 0:
-                if S[i] =='#':
-                    skipS += 1
-                    i -= 1
-                elif skipS > 0:
-                    skipS -= 1
-                    i -= 1
+                if S[i] =='#': skipS, i = skipS+1, i-1
+                elif skipS > 0: skipS, i = skipS-1, i-1
                 else: break
             
             # find the position of next possible char in T
             while j >= 0:
-                if T[j] =='#':
-                    skipT += 1
-                    j -= 1
-                elif skipT > 0:
-                    skipT -= 1
-                    j -= 1
+                if T[j] =='#': skipT, j = skipT+1, j-1
+                elif skipT > 0: skipT, j = skipT-1, j-1
                 else: break
+                  
             # do the two actual characters match?
             if i >= 0 and j >= 0 and S[i] != T[j]: return False
             
             # comparing a char with nothing?
             if (i >= 0) != (j >= 0): return False
             
-            i -= 1
-            j -= 1
+            i, j = i-1, j-1
         
+        # we have looked at both strings, and reached here, that means chars match
         return True
-        
+      
 # all leetcode tests pass
