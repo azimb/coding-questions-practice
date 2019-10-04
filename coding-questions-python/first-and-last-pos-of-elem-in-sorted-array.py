@@ -36,11 +36,11 @@ Approach:
 Time complexity:
     - the first binary search will take O(log n) time
     - and the second binary search will also take O(log n) time
-    - therefore, the space complexity is O(log n)
+    - therefore, algo's time complexity is O(log n)
     
 Space complexity:
     - the max depth of recursion will be O(log n)
-    - so, the space complexity is O(log n)
+    - so, algo's space complexity is O(log n)
 '''
 
 def searchRange(self, nums, target):
