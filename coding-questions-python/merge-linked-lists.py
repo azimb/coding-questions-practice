@@ -26,6 +26,27 @@ def merge_sorted(head_one, head_two):
 
     return dummyNode.next
 
+
+# much cleaner
+'''
+def mergeTwoLists(l1, l2):
+    dummy_node = ListNode(-1)
+    tail = dummy_node
+
+    while l1 and l2:
+        if l1.val < l2.val:
+            tail.next = l1
+            l1 = l1.next
+        else:
+            tail.next = l2
+            l2 = l2.next
+        tail = tail.next
+
+    tail.next = l1 if l1 else l2
+    return dummy_node.next
+'''
+
+
 # tests
 #trivial test
 second_one = LinkedListNode(5, None)
