@@ -22,6 +22,26 @@ def copy_remaining(nums1, nums2, index, v):
         index -= 1
         v -= 1
 
+        
+# much cleaner code
+'''
+n1_pointer = m-1
+n2_pointer = n-1
+
+n1_tail = len(nums1) - 1
+while n1_pointer >= 0 and n2_pointer >= 0:
+    num_one = nums1[n1_pointer]
+    num_two = nums2[n2_pointer]
+    if num_one > num_two:
+        nums1[n1_tail] = num_one
+        n1_pointer -= 1
+    else:
+        nums1[n1_tail] = num_two
+        n2_pointer -= 1
+    n1_tail -= 1
+
+nums1[0:n2_pointer+1] = nums2[0:n2_pointer+1]
+'''
 
 # tests
 import unittest
