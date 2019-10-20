@@ -1,7 +1,7 @@
 '''
 LC: https://leetcode.com/problems/bus-routes/
 Approach: BFS
-Time and space complexity: #TODO
+Time and space complexity: O(RS) where R = len(routes) and S is len of each route
 '''
 
 def numBusesToDestination(self, routes, S, T):
