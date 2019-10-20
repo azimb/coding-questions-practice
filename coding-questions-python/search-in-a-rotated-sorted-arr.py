@@ -19,14 +19,14 @@ def search_in_rotated_sorted(nums):
     # right half is sorted
     elif nums[mid] < nums[right]:
       # it's in right half
-      if target > nums[mid] and target <= nums[right]: left = mid + 1
+      if nums[mid] < target <= nums[right]: left = mid + 1
       # it's not in right half, so check left half
       else: right = mid - 1
 
     # left half is sorted
     else: # nums[mid] > nums[right]
       # it's in left half
-      if target >= nums[left] and target < nums[mid]: right = mid - 1
+      if nums[left] <= target < nums[mid]: right = mid - 1
       # it's not in the left half, so check right half
       else: left = mid + 1
 
