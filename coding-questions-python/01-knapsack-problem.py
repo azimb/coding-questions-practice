@@ -4,7 +4,7 @@ YouTube: https://www.youtube.com/watch?v=xCbYmUPvc2Q&t=26s
 '''
 
 def knapSack(cap, W, V, n):
-	# 2D array for dyn.prog -- bottom up approach
+    # 2D array for dyn.prog -- bottom up approach
     dp_arr = [[0 for x in range(cap+1)] for y in range(n+1)]
 
     # max value with no items is always 0
@@ -25,6 +25,8 @@ def knapSack(cap, W, V, n):
 
     # get the global optimal solution
     return dp_arr[-1][-1]
+
+# O(C*N) time and space complexity, where C = total capacity, N = # of items 
 
 # Driver program to test above function 
 val = [60, 100, 120] 
