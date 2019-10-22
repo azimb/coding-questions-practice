@@ -5,7 +5,7 @@ LC: https://leetcode.com/problems/3sum-closest/
 Approach:
   - for each unique elem, do a standard 2sum search
   - for the 2sum search, increment left or decrement right to move closer to the target
-  - for each sum, update global_sum if sum is closer to the target that global_sum is
+  - for each sum, update global_sum if sum is closer to the target than global_sum is
   
 Python lists are sorted by TimSort:
   - time complexity: O(N) best case and O(N logN) worst case
