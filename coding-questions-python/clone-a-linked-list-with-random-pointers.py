@@ -9,10 +9,10 @@ def clone_ll_with_random_pointers(head):
         the trick is to maintain a hashmap to create each node's mapping with it's clone
 
     In the second pass, we pick each node, get it's clone from the map, and set the clone's next
-    and randome pointers by using the nodes own next and random nodes.
+    and random pointers by using the node's own next and random nodes.
 
-    To clarify, when you go to current nodes random, you also have the random clone node your
-    current clone node should map to.
+    To clarify, when you go to current node's random, you also have the random clone node your
+    current clone node's randome node should map to.
 
     This guarantees a linear time and space complexity.
 
@@ -28,8 +28,7 @@ def clone_ll_with_random_pointers(head):
         cur = cur.next
 
     # second pass -- for each node, get it's clone node
-    # set the clone's next and random usng your own next and random and then accessing _their_ clone
-    #   nodes using the hashmap
+    # set the clone's next and random usng your own next and random and then accessing _their_ clone nodes using the hashmap
     cur = head
     while cur:
         # cur's clone
