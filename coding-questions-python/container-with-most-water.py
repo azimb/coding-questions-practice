@@ -7,9 +7,9 @@ Note: You may not slant the container and n is at least 2.
 Leetcode: https://leetcode.com/problems/container-with-most-water/
 
 Approach:
-    - the area formed between the two lined will always be limited by the shorter line
+    - the area formed between the two lines will always be limited by the shorter line
     - a two pointer approach is used, one starting at the beginning of the list, and the orther starting at the end
-    - at each step, we find the area formed by the two lines and update max_area is required
+    - at each step, we find the area formed by the two lines and update max_area if required
     - * and then, move the pointer pointing to the shorter line inward
     (this is because, if we  try to move the pointer at the longer line inwards, we won't gain any increase in area,
     since it is limited by the shorter line. But moving the shorter line's pointer could turn out to be beneficial,
