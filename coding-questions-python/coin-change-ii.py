@@ -28,7 +28,7 @@ Approach:
     - idea is to use a 2d array as a memo
     - cols will be amounts from 0..given_amount
     - each row will add a new coin to the list of coins being considered. ex: [], [c1], [c1,c2], [c1,c2,c3], ...
-    - memo[row][col] = ways to make amount col, given the coins coins_arr[0:row-1]
+    - memo[row][col] = ways to make amount col, given the coins coins_arr[0:row]
 
 Time complexity:
     - computing the ways for each each new addition of the coin
@@ -93,11 +93,9 @@ def coin_change_ii(amount, coins):
 
             # include this coin
             # amount will be current_amount-coin's amount; and same row (keep current coin in the list of coins)
-            if col >= coins[row - 1]:
-                # print "looking at coin"
-                # print coins[row-1]
+            if col >= coins[row - 1]: # make sure the value of coin doesn't exceed the amount
                 ways_two = subproblems_arr[row][col - coins[row - 1]]
-
+                
             total_ways = ways_one + ways_two
             subproblems_arr[row][col] = total_ways
 
