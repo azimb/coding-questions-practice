@@ -1,14 +1,12 @@
 '''
-LC:
-
+LC: https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/
+YouTube: https://www.youtube.com/watch?v=nPtARJ2cYrg
+Complexity Analysis: O(n) time and space complexity
 '''
+
+from collections import deque
+
 def distanceK(self, root, target, K):
-  """
-  :type root: TreeNode
-  :type target: TreeNode
-  :type K: int
-  :rtype: List[int]
-  """
   if not root: return []
 
   parents_mapping = {}
