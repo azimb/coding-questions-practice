@@ -1,18 +1,19 @@
 '''
 Write a function that compares a binary and a hexadecimal and returns true if they are equal.
+Complexity analysis: O(n+m) time and O(1) space complexity
 '''
 
 def check_num_equality(bin, hex):
     return convert_from_base(bin[2:], 2) == convert_from_base(hex[2:], 16)
 
 def convert_from_base(num, base):
-    oct_dictionary = {'a': "10", 'b': "11", 'c': "12", 'd': "13", 'e': "14", 'f': "15"}
+    hex_dictionary = {'a': "10", 'b': "11", 'c': "12", 'd': "13", 'e': "14", 'f': "15"}
     result = 0
     len_of_num = len(num)
     for i in range(len_of_num):
         coef = num[len_of_num-1-i]
-        if coef in oct_dictionary:
-            coef = oct_dictionary[coef]
+        if coef in hex_dictionary:
+            coef = hex_dictionary[coef]
         result += (int(coef)*(base**i))
     return result
 
