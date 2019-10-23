@@ -1,36 +1,15 @@
+'''
+LC: https://leetcode.com/problems/merge-two-sorted-lists/
+Complexity analysis: O(m+n) time complexity.
+    O(1) space complexity, excluding the space required for the output/new linked list.
+'''
+
 class LinkedListNode:
     def __init__(self, val, next):
         self.val, self.next = val, next
 
-def merge_sorted(head_one, head_two):
-    dummyNode = LinkedListNode(0, None)
-    tail = dummyNode
-
-    while True:
-        if not head_one:
-            tail.next = head_two
-            break
-
-        if not head_two:
-            tail.next = head_one
-            break
-
-        if head_one.val <= head_two.val:
-            tail.next = head_one
-            tail = tail.next
-            head_one = head_one.next
-        else:
-            tail.next = head_two
-            tail = tail.next
-            head_two = head_two.next
-
-    return dummyNode.next
-
-
-# much cleaner
-'''
-def mergeTwoLists(l1, l2):
-    dummy_node = ListNode(-1)
+def merge_sorted(self, l1, l2):
+    dummy_node = LinkedListNode(-1)
     tail = dummy_node
 
     while l1 and l2:
@@ -44,8 +23,6 @@ def mergeTwoLists(l1, l2):
 
     tail.next = l1 if l1 else l2
     return dummy_node.next
-'''
-
 
 # tests
 #trivial test
