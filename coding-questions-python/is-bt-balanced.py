@@ -2,7 +2,7 @@
 LC: https://leetcode.com/problems/balanced-binary-tree/
 YouTube: https://www.youtube.com/watch?v=LU4fGD-fgJQ&t=648s
 
-A recursive but a bottom up approach (the regular recursive top down cause O(n^2) runtime).
+A recursive but a bottom up approach (the regular recursive top down solves it in O(n^2) runtime).
 Drill down to the leaf node, and move up.
 For each node, the tree is balanced rooted at that node if:
     a) left and right subtrees are balanced
