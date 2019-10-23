@@ -5,7 +5,7 @@ Approach:
   - variation of binary search
   - discard half of the search space by using the following trick
   a) if nums[mid] > nums[right] --> pivot is in the right half
-  b) else pivot is in the right half
+  b) else pivot is in the left half
   * easy to find pivot when cur elem is bigger than right, or smaller than left
   
 Time/Space complexity analysis: O(log n) time and O(1) space complexity
