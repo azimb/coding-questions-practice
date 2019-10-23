@@ -21,4 +21,4 @@ def flatten(self, root):
 
     node = node.right
     
-# all leetcode tests pass as of 
+# all leetcode tests pass as of 21st Oct 2019
