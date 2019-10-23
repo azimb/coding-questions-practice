@@ -24,7 +24,7 @@ def maximalSquare(self, matrix):
   return max_square**2 # we have the len of max square, so # of 1s will be len*2
     
 def subprob(self, dp, i, j):
-  if i >= len(dp) or j >= len(dp[i]): return 0 # list index out of range
+  if i < 0 or i >= len(dp) or j < 0 or j >= len(dp[i]): return 0 # list index out of range
   return dp[i][j] # get subproblem solution if indices are valid
   
   # all leetcode tests pass as of 19th Oct 2019
