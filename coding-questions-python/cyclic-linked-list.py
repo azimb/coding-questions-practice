@@ -1,4 +1,6 @@
 '''
+LC: https://leetcode.com/problems/linked-list-cycle/
+
 Given a linked list, determine if it has a cycle in it.
 
 To represent a cycle in the given linked list, we use an integer pos which represents the position (0-indexed)
@@ -14,6 +16,10 @@ And if we have, we return true. If we "fall out" of list, we return false.
 Limitations:
 - list must have unique elements
 - O(N) space required
+
+Note: instead of storing the node's val, we can store it's reference in the hashset. 
+This means, we don't need to worry about duplicate node values anymore, every node will have it's own reference.
+However, we are still using O(N) space, and this can be optimized.
 
 Updated algorithm:
 Use a two pointer appproach -- one fast (moves by 2 steps) and one slow (moves by a single step).
