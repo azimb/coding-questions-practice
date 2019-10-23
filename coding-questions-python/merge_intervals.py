@@ -27,20 +27,21 @@ Approach:
     * otherwise, when they overlap, we merge them by updating the end (interval[1]) of the previously merged
         interval if it's less than the end of the current interval
 
+* Python uses Timsort under the hood.
+
 Time complexity:
-    - sorting will take O(nlogn) time
+    - sorting will take O(nlogn) time in worst case
+    (and timsort's best case runtime is O(N))
     - one pass through the interval array will take O(n) time
     - so, the time complexity is O(nlogn)
 
 Space complexity:
-    - #FIXME: is the sorting inplace?
-    - because the sorting is inplace, we don't use extra storge
-    (excluing the array that is used to return)
-    - so, the space complexity is O(1) or constant
+   - timsort's space complexity is O(N)
+   - so, the space complexity is O(N)
 '''
 
 def merge_intervals(intervals):
-    # uses time slot (similar to merge sort) nlogn time and O(n) space
+    # uses timsort (similar to merge sort) O(nlogn) time (worst case) and O(n) space
     intervals.sort(key=lambda x: x[0])
     
     merged_intervals = []
@@ -50,7 +51,7 @@ def merge_intervals(intervals):
         if not merged_intervals or merged_intervals[-1][1] < cur_interval[0]:
             merged_intervals.append(cur_interval)
 
-        # there is overlapping -- update the end of the merged interval is required
+        # there is overlapping -- updating the end of the merged interval is required
         else:
             merged_intervals[-1][1] = max(merged_intervals[-1][1], cur_interval[1])
 
