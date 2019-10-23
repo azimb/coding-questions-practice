@@ -25,8 +25,8 @@ Leetcode: https://leetcode.com/problems/longest-common-subsequence/
 YouTube: https://www.youtube.com/watch?v=ASoaQq66foQ
 
 Approach:
-    - the idea is to solve subproblems optimally, ad then use their answers to solve the global optimal solution
-    - a 2d array is used as a cache to store the subproblems for substrings of different sizes of both strings
+    - the idea is to solve smaller subproblems optimally, and then use their answers to get the global optimal solution
+    - a 2d array is used as a cache to store the sols to subproblems for substrings of different sizes of both strings
 
     visualization:
         ""  c1  c2  c3  c4 ...
@@ -62,8 +62,9 @@ def longest_common_subsquence(text1, text2):
     subprob_arr = [[0 for x in range(len(text1) + 1)] for y in range(len(text2) + 1)]
 
     # longest common subsequence between any string and "" is 0
-    for i in range(len(subprob_arr)): subprob_arr[i][0] = 0
-    for i in range(len(subprob_arr[0])): subprob_arr[0][i] = 0
+    # these are redundant, as the array was already initialized with 0s
+    for i in range(len(subprob_arr)): subprob_arr[i][0] = 0 # code added for explaining that lcs("", anything) = 0
+    for i in range(len(subprob_arr[0])): subprob_arr[0][i] = 0 # code added for explaining that lcs(anything, "") = 0
 
 
     # for substrings of diff lengths, try to match the last character
