@@ -1,7 +1,7 @@
 '''
 LC: https://leetcode.com/problems/minimum-path-sum/
 
-Top down dp approach with the help of a 2D array cache
+Bottom-up dp approach with the help of a 2D array cache
 Similart to: https://github.com/baghadiya/coding-questions-practice/blob/master/coding-questions-python/unique-paths-i.py
 O(mn) time and space complexity
 # TODO: more efficient with 1D cache 
