@@ -23,7 +23,7 @@ def canAttendMeetings(self, intervals):
     # is the meeting starting before the previous meeting ended?
     if intervals[i][0] < intervals[i-1][1]: return False
     
-  # no conflicts occured, we so good
+  # no conflicts occured, we're good
   return True
   
 # all leetcode tests pass as of 31st October 2019
