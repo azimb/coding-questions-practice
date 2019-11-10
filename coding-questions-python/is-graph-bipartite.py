@@ -1,5 +1,5 @@
 '''
-LC:
+LC: https://leetcode.com/problems/is-graph-bipartite/
 
 Approach:
   - Our goal is trying to use two colors to color the graph and see if there are any adjacent nodes having the same color.
@@ -22,10 +22,6 @@ Space complexity:
 '''
 
 def isBipartite(self, graph):
-  """
-  :type graph: List[List[int]]
-  :rtype: bool
-  """
   if not graph: return False
 
   # color map will track the color of each node
