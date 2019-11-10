@@ -58,7 +58,7 @@ def bfs(self, i, graph, color):
         # enqueue it, so it can be processed later
         queue.append(neighbor)
 
-  # didn't discover bipartite property, so return True 
+  # didn't discover non-bipartite property, so return True 
   return True
   
 # all leetcode tests pass as of 10th Nov 2019
