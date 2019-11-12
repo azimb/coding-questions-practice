@@ -25,16 +25,16 @@ def exclusiveTime(n, logs):
     func, time = int(func), int(time)
 
     # starting a new function, so current function "ended"
-    #(in the sense that the time span wouldn't be added to it's time)
-    # it's time will incremented by (time right now + when did the function before it "end") 
+    #(in the sense that the time span wouldn't be added to it's exclusive time)
+    # it's time will incremented by (time right now - when did the function before it "end") 
     if type == "start":
       if stack: 
         ans[stack[-1]] += time - prev_time
       stack.append(func)
-      # new function starts, so the time cur_func ended is => time
+      # new function starts, so the time at which the cur_func ends is => time
       prev_time = time
 
-    # cur function ends, so get the time elapsed by
+    # cur function ends, so get the time elapsed by cur_func is
     # (the time right now + time when the prev function "ended") + 1
     # adding 1 because when cur function ends, it consumes that full time unit
     else: # type == "end"
