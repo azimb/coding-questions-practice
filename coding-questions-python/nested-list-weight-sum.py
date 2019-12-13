@@ -18,7 +18,7 @@ Approach (DFS):
   - we go through the list of nested integers one by one, keeping track of the current depth dd
   - if a nested integer is an integer n, we calculate its sum as n*d
   - otherwise, if the nested integer is a list, we calculate the sum of this list recursively using the same process 
-    but with depth d+1d+1
+    but with depth d+1
 
 Complexity Analysis:
   - algorithm takes O(N) time, where N is the total number of nested elements in the input list
@@ -40,6 +40,6 @@ def nested_sum_recursive(input_arr, depth):
     if isinstance(elem, Number): cur_sum += elem * depth
     else: cur_sum += nested_sum_recursive(elem, depth + 1)
 
-    return cur_sum
+  return cur_sum
 
 # Note that LC expects you to use NestedInteger interface, so the code may require some changes
