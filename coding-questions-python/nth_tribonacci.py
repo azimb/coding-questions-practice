@@ -7,7 +7,7 @@ nth tribonacci number is defined as:
 
 Write a function that takes a number n as a parameter, and returns the nth tribonacci number.
 
-Follow up? Can you do this in linear time and linear space complexity?
+Follow up? Can you do this in linear time and constant space complexity?
 
 '''
 
