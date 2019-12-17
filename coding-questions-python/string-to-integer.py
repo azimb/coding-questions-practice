@@ -1,5 +1,4 @@
 '''
-The description is lengthy, read up on LC.
 Leetcode: https://leetcode.com/problems/string-to-integer-atoi/
 
 Approach:
@@ -14,10 +13,8 @@ Time complexity:
 
 Space complexity:
     - log 10 x
-    (where x is the result integer)
-    TODO: double check space complexity
+    (as an integer can have upto log 10 x digits, where x is the integer value)
 '''
-
 
 def string_to_integer(str):
     max_int, min_int = (2 ** 31) - 1, -(2 ** 31)  # will be useful to check overflow
