@@ -3,9 +3,9 @@ LC: https://leetcode.com/problems/top-k-frequent-elements/
 
 Approach:
   - inspired by bucket sort
-  - we will have buckets 1,2,3,...i that denote the frequency and 
-    each bucket will have the elems that appear in the array i many times
-  - then we will loop from the end of the array of bucks (we want the most frequent elems)
+  - we will have buckets 1,2,3,...m that denote the frequency and 
+    each bucket will have the elems that appear in the array m many times
+  - then we will loop from the end of the array of buckets (we want the most frequent elems)
     and extract k elements
     
   - how do we make the buckets:
