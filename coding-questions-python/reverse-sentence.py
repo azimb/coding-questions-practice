@@ -7,6 +7,9 @@ Idea:
     - then reverse individual words
     - runtime complexity: O(N) where N is the length of the c-string
     - constant ( O(1) ) storage complexity
+
+Note:- this question is same as: 
+https://github.com/baghadiya/coding-questions-practice/blob/master/coding-questions-python/reverse-words-in-string-ii.py 
 '''
 
 def reverseSentence(cString):
