@@ -1,9 +1,7 @@
 '''
 Write a function that takes a string as input and reverse only the vowels of a string.
 
-Runtime: O(N)
-
-Space complexity: constant (not considering the space required for the input).
+Time and Space complexity: O(N) as we use two-pointers approach and auxiliary space for the c-string.
 '''
 
 def reverseVowels(str):
