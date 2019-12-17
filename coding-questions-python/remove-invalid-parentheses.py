@@ -31,7 +31,7 @@ def remove(self, str_to_check, start_to_count, start_to_remove, results, pair = 
 
         self.remove(new_str_to_check, new_start_to_count, new_start_to_remove, results, pair)
 
-      return
+    return
 
   reversed_str_to_check = str_to_check[::-1]
   if pair[0] == '(':
