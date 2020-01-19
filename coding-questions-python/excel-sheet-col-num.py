@@ -23,13 +23,12 @@ Space complexity:
       col_num += (26 ** exp) * (ord(char) - ord('A') + 1)
   return col_num
 
-  # this method generates and 
+  # this method generates and consumes a dict like {'A': 1, 'B': 2, ... , 'Z': 26}
   '''
   alphabets = dict(zip(string.ascii_uppercase, range(1,27)))
   col_name, col_num = s[::-1], 0
   for i in range(len(col_name)): col_num += alphabets[col_name[i]] * (26**i)
   return col_num
-
   '''
 
 # all leetcode tests pass as of 18th Jan 2020
