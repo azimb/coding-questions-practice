@@ -20,8 +20,8 @@ def smallerNumbersThanCurrent(nums):
 
     # for each num in nums, count[num-1] = # of elems less than or equal to num-1
     # this is the same as # of elems less than num
-         = []
+    result = []
     for num in nums: result.append( count[num-1] if num else 0 )
-    return     
+    return result   
         
 # all leetcode tests pass as of 29th April 2020
