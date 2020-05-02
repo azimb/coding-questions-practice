@@ -13,7 +13,7 @@ Note:
     * explanation: https://www.youtube.com/watch?v=lOUe8Q9jQow
     * code: https://leetcode.com/problems/sort-list/discuss/46712/Bottom-to-up(not-recurring)-with-o(1)-space-complextity-and-o(nlgn)-time-complextity
 '''
-from LinkedListNode import LinkedListNode
+from ListNode import ListNode
 
 def sortList(head):
     # edge case
@@ -54,7 +54,7 @@ def sortList(head):
 # usual merge two linked lists operation
 def merge(self, l1, l2):
     l1_p, l2_p = l1, l2
-    dummy_head = LinkedListNode(-1)
+    dummy_head = ListNode(-1)
     tail = dummy_head
 
     while l1_p and l2_p:

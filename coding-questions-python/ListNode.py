@@ -9,6 +9,6 @@ head = LinkedListNode(2, second)
 ```
 '''
 
-class LinkedListNode:
+class ListNode:
     def __init__(self, val, next):
         self.val, self.next = val, next

@@ -21,10 +21,10 @@ Complexities:
     - space complexity is O(1) or constant
 '''
 
-from LinkedListNode import LinkedListNode
+from ListNode import ListNode
 
 def add_two_numbers(l1, l2):
-    dummy = LinkedListNode(-1)
+    dummy = ListNode(-1)
     result = dummy # result will keep a pointer to the dummy_head
     l1_pointer, l2_pointer = l1, l2
     carry = 0
@@ -41,7 +41,7 @@ def add_two_numbers(l1, l2):
 
         # add the second digit of the addition as a Node
         # or the only digit, if it's a single digit sum
-        dummy.next = LinkedListNode(addition % 10)
+        dummy.next = ListNode(addition % 10)
         dummy = dummy.next
 
         # go to the next node in the list, if it exists

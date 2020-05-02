@@ -1,0 +1,52 @@
+'''
+LC: https://leetcode.com/problems/insertion-sort-list/
+
+Approach:
+    - at each iteration, insertion sort removes one element from the input data,
+    finds the location it belongs within the sorted list, and inserts it there
+
+Complexity analysis:
+    - time complexity: O(n^2) -- avg/worst case (base case -> O(n))
+    - space complexity: O(1)
+
+Refer to the following for more explanation:
+https://leetcode.com/problems/insertion-sort-list/discuss/46420/An-easy-and-clear-way-to-sort-(-O(1)-space-)
+https://leetcode.com/problems/insertion-sort-list/discuss/46420/An-easy-and-clear-way-to-sort-(-O(1)-space-)/45974
+'''
+
+from ListNode import ListNode
+
+
+def insertion_sort_list(head):
+    # new head for the sorted list
+    dummy_start = ListNode('+inf')
+    # we will find the correct position for this node in the sorted list, and insert it
+    cur = head
+
+    # cur will be inserted between prev and prev.next
+    prev = dummy_start
+
+    # look at each node in the list
+    while cur:
+        # save a pointer to next node for the next iteration
+        cur_next = cur.next
+
+        # before insertion, prev points to the last node of the sorted list
+        # only reset prev to dummy_start, if cur.val is smaller than prev.val
+        # (this is because if cur.val > prev.val, it will _NOT_ appear before prev)
+        if cur.val < prev.val: prev = dummy_start
+
+        # find the correct position to insert cur
+        while prev and prev.next and prev.next.val < cur.val: prev = prev.next
+
+        # insert cur between prev and prev.next
+        cur.next = prev.next
+        prev.next = cur
+
+        # look at the next node in next iteration
+        cur = cur_next
+
+    # return the real head of the sorted list
+    return dummy_start.next
+
+# all leetcode tests pass as of May 2 2020

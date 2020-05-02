@@ -41,9 +41,9 @@ def swapPairs(self, head):
 b) Iterative
 O(N) time and O(1) space
 '''
-from LinkedListNode import LinkedListNode
+from ListNode import ListNode
 def swapPairs(head):
-    dummy = LinkedListNode(-1)
+    dummy = ListNode(-1)
     dummy.next = head
 
     point = dummy
