@@ -15,6 +15,8 @@ Complexity analysis:
   - not using any auxiliary space
   - so, the space complexity is O(1)
 
+Refer to this to understand the time complexity better:
+https://leetcode.com/problems/flatten-binary-tree-to-linked-list/discuss/37010/Share-my-simple-NON-recursive-solution-O(1)-space-complexity!/35137
 '''
 
 
